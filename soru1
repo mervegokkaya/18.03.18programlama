@@ -1,0 +1,27 @@
+#DEFINE
+def giderHesapla(hammaddeMaliyeti,bakımOnarımGiderleri,sevkiyatGiderleri,satınAlınanHizmetGiderleri):
+	global toplamGider
+	toplamGider=hammaddeMaliyeti+bakımOnarımGiderleri+sevkiyatGiderleri+satınAlınanHizmetGiderleri
+	return toplamGider
+def satısMiktarı(x):
+        global toplamsatısMiktarı
+        toplamsatısMiktarı=x
+        return toplamsatısMiktarı
+def katmaDegerCiro(toplamGider,toplamsatısMiktarı):
+    katmaDegerCiro=toplamGider+toplamsatısMiktarı
+    if (katmaDegerCiro>1000):
+        print("Katma Değer Ciro Yüksek")
+    elif (500<katmaDegerCiro<999):
+        print("Katma Değer Ciro Normal")
+    else:
+        print("Katma Değer Ciro Düşük")
+#ACTION
+hammaddeMaliyeti=int(input("Hammadde Maliyeti Giriniz:"))
+bakımOnarımGiderleri=int(input("Bakım Onarım Giderleri Giriniz:"))
+sevkiyatGiderleri=int(input("Sevkiyat Giderleri Giriniz:"))
+satınAlınanHizmetGiderleri=int(input("Satın Alınan Hizmet Giderleri Giriniz:"))
+x=int(input("Satış Miktarı Giriniz"))
+
+a=giderHesapla(hammaddeMaliyeti,bakımOnarımGiderleri,sevkiyatGiderleri,satınAlınanHizmetGiderleri)
+b=satısMiktarı(x)
+katmaDegerCiro(a,b)
