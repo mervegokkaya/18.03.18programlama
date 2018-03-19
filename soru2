@@ -1,0 +1,20 @@
+def calısmahesapla2016(CalısılanSüre=170,toplamMüsteriSayısı=50):
+    global toplam2016Calısma
+    toplam2016Calısma=(CalısılanSüre/toplamMüsteriSayısı)
+    return toplam2016Calısma
+def calısmahesapla2017(CalısılanSüre=220,toplamMüsteriSayısı=70):
+    global toplam2017Calısma
+    toplam2017Calısma=(CalısılanSüre/toplamMüsteriSayısı)
+def farkHesapla(toplam2016Calısma,toplam2017Calısma):
+    fark=toplam2017Calısma-toplam2016Calısma
+    if (fark>0):
+       print("2017'de Müşterilerle Çalışma Süresi Daha Fazladır")
+    elif (fark<0):
+       print("2017'de Müşterilerle Çalışma Süresi 2016'dan Daha Düşüktür")
+    else:
+       print("2017 ve 2016 Müşterilerle Çalışma Süresi Eşittir")
+    
+print("Müşterilerle çalışma süreleri girilen verilere ve yıllara göre hesaplanmıştır ve böylece:")             
+a=calısmahesapla2016(CalısılanSüre=170,toplamMüsteriSayısı=50)
+b=calısmahesapla2017(CalısılanSüre=220,toplamMüsteriSayısı=70)
+farkHesapla(toplam2016Calısma,toplam2017Calısma)
