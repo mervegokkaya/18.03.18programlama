@@ -1,0 +1,54 @@
+def ilk6ayGelir(ilkyazılımGeliri,ilkfinansmanGelir,ilkürünSatısGelir):
+    global ilktoplamGelir
+    ilktoplamGelir=ilkyazılımGeliri+ilkfinansmanGelir+ilkürünSatısGelir
+    return ilktoplamGelir
+def ilk6ayGider(ilkcalısanMaasları,ilkkiraGider,ilkdonanımMaliyeti):
+    global ilktoplamGider
+    ilktoplamGider=ilkcalısanMaasları+ilkkiraGider+ilkdonanımMaliyeti
+    return ilktoplamGider
+def son6ayGelir(sonyazılımGeliri,sonsponsorlukGeliri,soneTicaretGeliri,sonurunSatısGeliri):
+    global sontoplamGelir
+    sontoplamGelir=sonyazılımGeliri+sonsponsorlukGeliri+soneTicaretGeliri+sonurunSatısGeliri
+    return sontoplamGelir
+def son6ayGider(soncalısanMaasları,sonkiraGider,sonbakımMaliyeti):
+    global sontoplamGider
+    sontoplamGider=soncalısanMaasları+sonkiraGider+sonbakımMaliyeti
+    return sontoplamGider
+def gelirHesapla(ilkyazılımGeliri,ilkfinansmanGelir,ilkürünSatısGelir,sonyazılımGeliri,sonsponsorlukGeliri,soneTicaretGeliri,sonurunSatısGeliri):
+    global toplamGelir
+    toplamGelir=ilkyazılımGeliri+ilkfinansmanGelir+ilkürünSatısGelir+sonyazılımGeliri+sonsponsorlukGeliri+soneTicaretGeliri+sonurunSatısGeliri
+    return toplamGelir
+def giderHesapla(ilkcalısanMaasları,ilkkiraGider,ilkdonanımMaliyeti,soncalısanMaasları,sonkiraGider,sonbakımMaliyeti):
+    global toplamGider
+    toplamGider=ilkcalısanMaasları+ilkkiraGider+ilkdonanımMaliyeti+soncalısanMaasları+sonkiraGider+sonbakımMaliyeti
+    return toplamGider
+def karHesapla(toplamGelir,toplamGider):
+    kar=toplamGelir-toplamGider
+    if(kar>5000):
+        print("İşletme Çok Karlı")
+    elif(1000<kar<5000):
+        print("İşletme Karı Normal")
+    else:
+        print("İşletme Yeterince Karda Değil")
+
+ilkyazılımGeliri=int(input("İlk 6 ay Yazılım Geliriniz:"))
+ilkfinansmanGelir=int(input("İlk 6 ay Finansman Geliriniz"))
+ilkürünSatısGelir=int(input("İlk 6 ay Ürün Satış Geliriniz"))
+ilkcalısanMaasları=int(input("İlk 6 ay Çalışan Maaşları"))
+ilkkiraGider=int(input("İlk 6 ay Kira Gideriniz"))
+ilkdonanımMaliyeti=int(input("İlk 6 ay Donanım Maliyetiniz"))
+sonyazılımGeliri=int(input("Son 6 ay Yazılım Geliriniz"))
+sonsponsorlukGeliri=int(input("Son 6 ay Sponsorluk Geliriniz"))
+soneTicaretGeliri=int(input("Son 6 ay Ticaret Geliriniz"))
+sonurunSatısGeliri=int(input("Son 6 ay Ürün Satış Geliriniz"))
+soncalısanMaasları=int(input("Son 6 ay Çalışan Maaşları"))
+sonkiraGider=int(input("Son 6 ay Kira Gideriniz"))
+sonbakımMaliyeti=int(input("Son 6 ay Bakım Maliyetiniz"))
+
+a=ilk6ayGelir(ilkyazılımGeliri,ilkfinansmanGelir,ilkürünSatısGelir)
+b=ilk6ayGider(ilkcalısanMaasları,ilkkiraGider,ilkdonanımMaliyeti)
+c=son6ayGelir(sonyazılımGeliri,sonsponsorlukGeliri,soneTicaretGeliri,sonurunSatısGeliri)
+d=son6ayGider(soncalısanMaasları,sonkiraGider,sonbakımMaliyeti)
+e=gelirHesapla(ilkyazılımGeliri,ilkfinansmanGelir,ilkürünSatısGelir,sonyazılımGeliri,sonsponsorlukGeliri,soneTicaretGeliri,sonurunSatısGeliri)
+f=giderHesapla(ilkcalısanMaasları,ilkkiraGider,ilkdonanımMaliyeti,soncalısanMaasları,sonkiraGider,sonbakımMaliyeti)
+karHesapla(e,f)
