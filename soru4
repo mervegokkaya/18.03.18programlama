@@ -1,0 +1,22 @@
+def dönemBası(koltukSayısı=25,yatakSayısı=20,dolapSayısı=10):
+    global toplamDönemBasıStok
+    toplamDönemBasıStok=(koltukSayısı+yatakSayısı+dolapSayısı)
+    return toplamDönemBasıStok
+def dönemSonu(koltukSayısı=35,yatakSayısı=35,dolapSayısı=15):
+    global toplamDönemSonuStok
+    toplamDönemSonuStok=(koltukSayısı+yatakSayısı+dolapSayısı)
+    return toplamDönemSonuStok
+def ortalamaStok(toplamDönemSonuStok,toplamDönemBasıStok):
+    ortalama=(toplamDönemSonuStok+toplamDönemBasıStok)/2
+    if(ortalama>50):
+       print("Ortalama Stok İyi")
+    elif(25<fark<50):
+       print("Ortalama Stok Normal")
+    else:
+       print("Ortalama Stok Düşük")
+
+           
+print("Mobilya şirketimizin 1 yıllık ortalama stok miktarı:70")             
+a=dönemBası(koltukSayısı=25,yatakSayısı=20,dolapSayısı=10)
+b=dönemSonu(koltukSayısı=35,yatakSayısı=35,dolapSayısı=15)
+ortalamaStok(a,b)
